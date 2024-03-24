@@ -1,0 +1,134 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#mainContainer{
+    width: 100%;
+    height: 100vh;
+    background-image: url("./Assets/Images/mathematics-757566_1280.jpg");
+    filter: brightness(120%);
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+#subContainer{
+    width: 20%;
+    height: 50vh;
+    background-color: black;
+    border-radius: 20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: -60px;
+}
+input{
+    width: 45px;
+    height: 35px;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 5px;
+    position:relative;
+    top: 15px;
+    border: none;
+    cursor: pointer;
+    animation: buttonAnimation 0.2s all;
+    position: relative;
+    top: -8px;
+}
+#display{
+    width: 220px;
+    height: 50px;
+    background-color: black;
+    position: relative;
+    color: white;
+    top: 1px;
+    border-radius: 5px;
+    cursor:default;
+    border: none;
+    outline: none;
+
+    background-image: linear-gradient(75deg,aqua,blue,red,yellow,green,aqua);
+    -webkit-animation-fill-mode: both;
+    -webkit-background-clip: text;
+    animation: displayAnimation 200s both;
+    -webkit-text-fill-color: transparent;
+    animation-iteration-count: infinite;
+}
+@keyframes displayAnimation{
+    from{
+        background-position: 18000px;
+    }
+    to{
+        background-position: 0px;
+    }
+}
+#h1{
+    position: relative;
+    top: -200px;
+    left: 150px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    letter-spacing: 2px;
+    animation: heading 10s linear infinite;
+}
+@keyframes heading{
+    0%{
+        transform: skewY(-20deg);
+    }
+    25%{
+        transform: skewY(20deg);
+    }
+    50%{
+        transform: skewY(-20deg);
+    }
+    75%{
+        transform: skewY(20deg);
+    }
+    100%{
+        transform: skewY(-20deg);
+    }
+}
+#clear{
+    width: 105px;
+    background-color: red;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+#equal{
+    width: 102px;
+    background-color: red;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+#display:hover{
+    transform: scale(1);
+}
+input:hover{
+    transform: scale(1.1);
+    background-color: rgb(9, 128, 202);
+    color: white;
+}
+#equal:hover{
+    transform: scale(1.1);
+    background-color: white;
+    color:red;
+}
+#clear:hover{
+    transform: scale(1.1);
+    background-color: white;
+    color:red;
+}
